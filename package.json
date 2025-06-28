@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "dev": "vite dev --port 5001",
     "preview": "vite preview --port 5001 --strictPort",
-    "clean": "rd /s /q dist || exit 0",
+    "clean": "rm -rf dist || true",
     "serve": "pnpm run clean && pnpm run build && pnpm run preview"
   },
   "dependencies": {
