@@ -7,10 +7,10 @@
     "start": "vite --port 5001",
     "build": "concurrently \"vite build --watch\" \"vite preview --port 5001 --strictPort\"",
     "lint": "eslint .",
-    "prebuild": "rm -rf dist || true",
     "dev": "vite dev --port 5001",
     "preview": "vite preview --port 5001 --strictPort",
-    "serve": "pnpm run build && pnpm run preview"
+    "clean": "rd /s /q dist || exit 0",
+    "serve": "pnpm run clean && pnpm run build && pnpm run preview"
   },
   "dependencies": {
     "@originjs/vite-plugin-federation": "1.3.6",
